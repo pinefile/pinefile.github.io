@@ -4,16 +4,19 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    description: <>TODO</>,
+    title: 'Easy to use',
+    description:
+      "Pine is easy to use and learn. With a few built-in functions you don't need to learn that much before using Pine. You can start right away.",
   },
   {
-    title: 'Task orchestration',
-    description: <>TODO</>,
+    title: 'Use existing npm packages',
+    description:
+      'Instead of having a lot of built-in functions or plugins you can just use an existing npm package to do stuff.',
   },
   {
     title: 'Lightweight',
-    description: <>TODO</>,
+    description:
+      'Pine is a lightweight task runner that just works and can be used with TypeScript and other JavaScript-transpilers.',
   },
 ];
 

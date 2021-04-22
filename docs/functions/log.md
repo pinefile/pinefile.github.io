@@ -37,3 +37,20 @@ module.exports = {
   },
 };
 ```
+
+## Create logger
+
+With `createLogger` you can create your own logger with custom prefix
+
+```js
+const { createLogger } = require('@pinefile/pine');
+
+const log = createLogger({
+  prefix: '[pine]'
+});
+
+module.exports = {
+  example: () => {
+    log.info('Foo');
+  },
+};

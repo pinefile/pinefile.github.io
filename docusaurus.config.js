@@ -27,6 +27,11 @@ module.exports = {
           label: 'Docs',
         },
         {
+          href: 'https://www.npmjs.com/package/@pinefile/pine',
+          label: 'npm',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/pinefile/pine',
           label: 'GitHub',
           position: 'right',
@@ -34,7 +39,7 @@ module.exports = {
       ],
     },
     footer: {
-      copyright: `Copyright © ${new Date().getFullYear()} Fredrik Forsmo and contributors`,
+      copyright: `Copyright © 2020-${new Date().getFullYear()} Fredrik Forsmo and contributors`,
     },
   },
   presets: [
@@ -43,7 +48,6 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl:
             'https://github.com/pinefile/pinefile.github.io/edit/master/docs/',
         },
