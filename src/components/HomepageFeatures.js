@@ -11,7 +11,7 @@ const FeatureList = [
   {
     title: 'Use existing npm packages',
     description:
-      'Instead of having a lot of built-in functions or plugins you can just use an existing npm package to do stuff.',
+      'Instead of having a lot of built-in functions or plugins you can just use an existing npm package to write your task.',
   },
   {
     title: 'Lightweight',
