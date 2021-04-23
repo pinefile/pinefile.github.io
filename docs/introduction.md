@@ -5,7 +5,13 @@ slug: '/'
 
 # Getting started
 
-Create `Pinefile` or `pinefile.js`
+Install with `npm`
+
+```
+npm install --save @pinefile/pine
+```
+
+Then create `Pinefile` or `pinefile.js`
 
 ```js
 const { run } = require("@pinefile/pine");
