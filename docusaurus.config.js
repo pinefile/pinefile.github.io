@@ -29,7 +29,7 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'getting-started',
+          docId: 'introduction',
           position: 'left',
           label: 'Docs',
         },
@@ -56,7 +56,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/pinefile/pinefile.github.io/edit/master/docs/',
+            'https://github.com/pinefile/pinefile.github.io/edit/develop/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
