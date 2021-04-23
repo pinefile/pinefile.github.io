@@ -17,10 +17,8 @@ jobs:
           node-version: 15.x
       - name: Install and build.
         run: |
-          npm ci
-          npm run build
-          npm run export
-          touch out/.nojekyll
+          yarn install
+          yarn build
         env:
           CI: true
       - name: Deploy!
@@ -31,4 +29,4 @@ jobs:
           commitEmail: "bot@frozzare.com"
           commitUser: "Frozzbot"
           destBranch: "master"
-          srcDir: "out"
+          srcDir: "build"

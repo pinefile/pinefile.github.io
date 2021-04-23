@@ -35,4 +35,4 @@ module.exports = {
 };
 ```
 
-You can see different example of runner functions [here](../../packages/pine/test/fixtures/pinefile.runner.js)
+You can see different example of runner functions [here](https://github.com/pinefile/pine/blob/master/packages/pine/test/fixtures/pinefile.runner.js)
