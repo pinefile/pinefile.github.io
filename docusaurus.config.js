@@ -46,7 +46,7 @@ module.exports = {
       ],
     },
     footer: {
-      copyright: `Copyright © 2020-${new Date().getFullYear()} Fredrik Forsmo and contributors`,
+      copyright: `Copyright © 2020-${new Date().getFullYear()} <a href="https://frozzare.com" target="_blank" rel="noopener noreferrer">Fredrik Forsmo</a> and contributors`,
     },
   },
   presets: [
