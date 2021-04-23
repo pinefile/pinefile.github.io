@@ -28,5 +28,5 @@ jobs:
           accessToken: ${{ secrets.PUSH_TOKEN }}
           commitEmail: "bot@frozzare.com"
           commitUser: "Frozzbot"
-          destBranch: "master"
+          destBranch: "main"
           srcDir: "build"
