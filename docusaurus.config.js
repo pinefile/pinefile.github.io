@@ -7,12 +7,19 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'pinefile', // Usually your GitHub org/user name.
-  projectName: 'pinefile.github.io', // Usually your repo name.
+  organizationName: 'pinefile',
+  projectName: 'pinefile.github.io',
   stylesheets: [
     'https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700|Source+Code+Pro:500,700|Source+Sans+Pro:400,400i,700',
   ],
   themeConfig: {
+    announcementBar: {
+      id: 'work_in_progress',
+      content: 'Work in progress, API may change before first stable release.',
+      backgroundColor: '#fafbfc',
+      textColor: '#091E42',
+      isCloseable: false,
+    },
     navbar: {
       title: 'Pine',
       logo: {

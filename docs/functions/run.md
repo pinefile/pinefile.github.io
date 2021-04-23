@@ -16,34 +16,6 @@ module.exports = {
 
 ## Options
 
-```js
-{
-  /**
-   * Current working directory of the child process.
-   *
-   * @default process.cwd()
-   */
-  cwd?: string;
+All Execa [options](https://github.com/sindresorhus/execa#options) can be used except `stdin`, `stdout` and `stderr` that's are defaulting to `inherit`.
 
-  /**
-   * Environment key-value pairs.
-   *
-   * @default process.stderr
-   */
-  env?: NodeJS.ProcessEnv;
-
-  /**
-   * stdout write stream
-   *
-   * @default process.stdout
-   */
-  stdout?: NodeJS.WriteStream;
-
-  /**
-   * stderr write stream
-   *
-   * @default process.stderr
-   */
-  stderr?: NodeJS.WriteStream;
-};
-```
+To change them you should use [shell](./shell.md) function instead and read about the default options for `shell` function.

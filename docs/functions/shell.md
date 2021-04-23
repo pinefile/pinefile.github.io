@@ -5,45 +5,17 @@ Run shell commands and returning output instead of log as [run](./run.md) functi
 ## Usage
 
 ```js
-const { shell } = require("@pinefile/pine");
+const { shell } = require('@pinefile/pine');
 
 module.exports = {
   example: async () => {
-    const gitLatestCommitID = await shell("git rev-parse HEAD");
+    const gitLatestCommitID = await shell('git rev-parse HEAD');
   },
 };
 ```
 
 ## Options
 
-```js
-{
-  /**
-   * Current working directory of the child process.
-   *
-   * @default process.cwd()
-   */
-  cwd?: string;
+All Execa [options](https://github.com/sindresorhus/execa#options) can be used. Pine has some default values that are different from Execa:
 
-  /**
-   * Environment key-value pairs.
-   *
-   * @default process.stderr
-   */
-  env?: NodeJS.ProcessEnv;
-
-  /**
-   * stdout write stream
-   *
-   * @default process.stdout
-   */
-  stdout?: NodeJS.WriteStream;
-
-  /**
-   * stderr write stream
-   *
-   * @default process.stderr
-   */
-  stderr?: NodeJS.WriteStream;
-};
-```
+*  `shell` option is default `true` instead of `false` so shell-specific features can be used (for or example, `&&` or `||`)

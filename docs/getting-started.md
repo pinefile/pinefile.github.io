@@ -38,18 +38,3 @@ Then run it! It is best to either place `pine` inside a npm run script or run it
 ```
 npx pine build
 ```
-
-## Built-in functions:
-
-- [color](functions/color.md)
-- [configure](functions/config.md)
-- [log](functions/log.md)
-- [run](functions/run.md)
-- [shell](functions/shell.md)
-
-## Advanced
-
-- [custom executable](advanced/custom-executable.md)
-- [plugins](advanced/plugins.md)
-- [split up tasks](advanced/split-up-tasks.md)
-- [transpilers](advanced/transpilers.md)
