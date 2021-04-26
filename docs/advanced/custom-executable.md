@@ -5,10 +5,10 @@ You can use create executable and use Pine under the hood. To make it work you n
 ```js
 #!/usr/bin/env node
 
-const { runCLI } = require("@pinefile/pine");
+const { api } = require("@pinefile/pine");
 const argv = process.argv.slice(2);
 
 argv.push(`--file=${__dirname}/pinefile.js`);
 
-runCLI(argv);
+api.runCLI(argv);
 ```
