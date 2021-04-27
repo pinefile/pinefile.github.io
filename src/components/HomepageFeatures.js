@@ -4,19 +4,19 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to use',
+    title: '⚡️ Easy to use and learn',
     description:
-      "Pine is easy to use and learn. With a few built-in functions you don't need to learn that much before using Pine. You can start right away.",
+      "With a few built-in functions you don't need to learn that much before using Pine. You can start right away.",
   },
   {
-    title: 'Use existing npm packages',
+    title: '💡 Use existing npm packages',
     description:
       'Instead of having a lot of built-in functions or plugins you can just use an existing npm package to write your task.',
   },
   {
-    title: 'Lightweight',
+    title: '💪 Flexible',
     description:
-      'Pine is a lightweight task runner that just works and can be used with TypeScript and other JavaScript-transpilers.',
+      'Pine is a flexible task runner that just works and can be used with TypeScript and other JavaScript-transpilers.',
   },
 ];
 
