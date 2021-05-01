@@ -56,4 +56,6 @@ module.exports = {
 }
 ```
 
+Then you can run `npx pine --name Foo` and it will run a custom runner and then execute the task function.
+
 You can see different example of runner functions [here](https://github.com/pinefile/pine/blob/master/packages/pine/test/fixtures/pinefile.runner.js)
