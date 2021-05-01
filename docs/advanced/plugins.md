@@ -34,5 +34,26 @@ module.exports = {
   },
 };
 ```
+To resolve a task function in the `pinefile` object you need to use `api.resolveTask` function. This is because the object isn't the same as in your pinefile.
+
+Example of how you can create your own runner and run a task in the same function.
+
+```js
+const { api, log } = require('@pinefile/pine')
+
+module.exports = {
+  runner: async (pinefile, name, argv) => {
+    if (argv) {
+      return async () => {
+        const task = api.resolveTask(name, pinefile);
+        await task(argv);
+      };
+    }
+
+    // pinefile arg is argv at this point.
+    log.info(`Hello ${pinefile.name}`);
+  },
+}
+```
 
 You can see different example of runner functions [here](https://github.com/pinefile/pine/blob/master/packages/pine/test/fixtures/pinefile.runner.js)
