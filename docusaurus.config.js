@@ -33,6 +33,7 @@ module.exports = {
           position: 'left',
           label: 'Docs',
         },
+        { to: 'blog', label: 'Blog', position: 'left' },
         {
           href: 'https://www.npmjs.com/package/@pinefile/pine',
           label: 'npm',
@@ -54,9 +55,14 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/pinefile/pinefile.github.io/edit/develop/',
+        },
+        blog: {
+          path: './blog',
+          routeBasePath: '/blog',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

@@ -19,5 +19,5 @@ trim_trailing_whitespace = false
 indent_style = tab
 indent_size = 8
 
-[*.{js,jsx,ts,tsx,vue}]
+[*.{js,jsx,ts,tsx,vue,md}]
 quote_type = single

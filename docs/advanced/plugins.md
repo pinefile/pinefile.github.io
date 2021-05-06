@@ -43,15 +43,15 @@ Example of how you can create your own runner and run a task in the same functio
 const { api, log } = require("@pinefile/pine");
 
 module.exports = {
-  hello: async (pinefile, name, argv) => {
-    if (argv) {
+  hello: (pinefile, name, args) => {
+    if (args) {
       return async () => {
         const task = api.resolveTask(name, pinefile);
-        await task(argv);
+        await task(args);
       };
     }
 
-    // pinefile arg is argv at this point.
+    // pinefile arg is args at this point.
     log.info(`Hello ${pinefile.name}`);
   },
 };
@@ -60,3 +60,25 @@ module.exports = {
 Then you can run `npx pine hello --name Foo` and it will run a custom runner and then execute the task function.
 
 You can see different example of runner functions [here](https://github.com/pinefile/pine/blob/master/packages/pine/test/fixtures/pinefile.runner.js)
+
+To change the global runner for all task functions you need to configure it:
+
+```js
+const { api, configure, log } = require("@pinefile/pine")
+
+configure({
+  runner: (pinefile, name, args) => {
+    return async () => {
+      const task = api.resolveTask(name, pinefile);
+      await task(args);
+    };
+  }
+})
+
+module.exports = {
+  hello: (args) =>  {
+    log.info(`Hello ${args.name}`);
+  }
+}
+```
+

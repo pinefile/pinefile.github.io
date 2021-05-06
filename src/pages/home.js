@@ -24,7 +24,7 @@ const HomeSplash = () => {
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/docs">
+          <Link className="button button--secondary button--lg" to="/">
             Getting started
           </Link>
         </div>
