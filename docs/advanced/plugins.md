@@ -46,7 +46,7 @@ module.exports = {
   hello: async (pinefile, name, argv) => {
     if (argv) {
       return async () => {
-        const task = api.resolveTask(name, pinefile);
+        const task = api.resolveTask(pinefile, name);
         await task(argv);
       };
     }
