@@ -16,14 +16,20 @@ const { api } = require('@pinefile/pine');
 // with create runner function
 const runner = api.createRunner(async (pinefile, name, argv) => {
   const task = api.resolveTask(pinefile, name);
-  await task(argv);
+
+  if (task) {
+    await task(argv);
+  }
 });
 
 // without create runner function
 const runner = async (pinefile, name, argv) => {
   return async () => {
     const task = api.resolveTask(pinefile, name);
-    await task(argv);
+
+    if (task) {
+      await task(argv);
+    }
   }
 });
 ```
@@ -40,7 +46,10 @@ module.exports = {
     if (argv) {
       return async () => {
         const task = api.resolveTask(pinefile, name);
-        await task(argv);
+
+        if (task) {
+          await task(argv);
+        }
       };
     }
 
@@ -66,7 +75,10 @@ const { api, configure, log } = require('@pinefile/pine');
 // with create runner function
 const runner = api.createRunner(async (pinefile, name, argv, options = {}) => {
   const task = api.resolveTask(pinefile, name);
-  await task(argv);
+
+  if (task) {
+    await task(argv);
+  }
 });
 
 configure({
@@ -90,7 +102,10 @@ const runner = api.createRunner(
   async (pinefile, name, argv, options = { foo: 'standard' }) => {
     const task = api.resolveTask(pinefile, name);
     log.info(`Using: ${options.foo}`);
-    await task(argv);
+
+    if (task) {
+      await task(argv);
+    }
   }
 );
 
