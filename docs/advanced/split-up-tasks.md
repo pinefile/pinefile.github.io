@@ -16,3 +16,19 @@ module.exports = {
 ```
 
 Then you can run `npx pine build:css`
+
+To load and export all tasks automatic you can do it with `fs.readFileSync` or some glob package.
+
+```js
+const fs = require('fs');
+
+const tasks = fs.readdirSync('./tasks').reduce(
+  (prev, cur) => ({
+    ...prev,
+    [cur.split('.').shift()]: require(`./tasks/${cur}`),
+  }),
+  {}
+);
+
+module.exports = tasks;
+```
