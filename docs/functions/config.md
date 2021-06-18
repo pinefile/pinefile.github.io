@@ -78,6 +78,11 @@ module.exports = {
   require: string[];
 
   /**
+   * Global runner that can be used to customize the runner for all tasks.
+   */
+  runner?: string | RunnerType | Record<string, any> | Array<any>;
+
+  /**
    * Task name of the function that is executing.
    */
   task: string;
