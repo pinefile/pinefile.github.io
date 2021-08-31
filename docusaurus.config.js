@@ -13,13 +13,13 @@ module.exports = {
     'https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700|Source+Code+Pro:500,700|Source+Sans+Pro:400,400i,700',
   ],
   themeConfig: {
-    announcementBar: {
-      id: 'work_in_progress',
-      content: 'Work in progress, API may change before first stable release.',
-      backgroundColor: '#fafbfc',
-      textColor: '#091E42',
-      isCloseable: false,
-    },
+    // announcementBar: {
+    //   id: 'work_in_progress',
+    //   content: 'Work in progress, API may change before first stable release.',
+    //   backgroundColor: '#fafbfc',
+    //   textColor: '#091E42',
+    //   isCloseable: false,
+    // },
     navbar: {
       title: 'Pine',
       logo: {
