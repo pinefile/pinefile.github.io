@@ -9,7 +9,7 @@ Various built in utils functions in Pine
 With `filterArgs` function you can filter out the built in arguments so you only have to deal with your own arguments inside a task function.
 
 ```js
-const { filterArgs, run } = require("@pinefile/pine");
+const { log, filterArgs } = require("@pinefile/pine");
 
 module.exports = {
   example: (args) => {
