@@ -36,58 +36,7 @@ module.exports = {
 
 ## Options
 
-```js
-{
-  /**
-   * Dynamic config properties.
-   */
-  [key: string]: any;
-
-  /**
-   * Array of dotenv files to load from root.
-   */
-  dotenv: string[];
-
-  /**
-   * Environment key-value pairs.
-   */
-  env: NodeJS.ProcessEnv;
-
-  /**
-   * Log level.
-   *
-   * @default 'info'
-   */
-  logLevel: 'error' | 'warn' | 'info' | 'silent';
-
-  /**
-   * Yargs options, key-value pairs.
-   *
-   * @link https://yargs.js.org/docs/#functions-optionskey-opt
-   */
-  options: OptionsType;
-
-  /**
-   * The root directory of Pinefile.
-   */
-  root: string;
-
-  /**
-   * Packages to preload before Pinefile is loaded.
-   */
-  require: string[];
-
-  /**
-   * Global runner that can be used to customize the runner for all tasks.
-   */
-  runner?: string | RunnerType | Record<string, any> | Array<any>;
-
-  /**
-   * Task name of the function that is executing.
-   */
-  task: string;
-}
-```
+You can see all current options for `configure` [here](https://github.com/pinefile/pine/blob/master/packages/pine/src/config.ts#L9)
 
 ## Get config
 

@@ -54,3 +54,36 @@ module.exports = {
     log.info('Foo');
   },
 };
+```
+
+## Configure custom logger
+
+> Since 1.1.0
+
+With `configure` you can set your custom logger so the core of Pine uses the same one, instead of the built in. To do this you need to follow the simple log api that Pine uses:
+
+```js
+const customLogger = {
+  info: (...msg) => console.log(...msg)
+  warn: (...msg) => console.warn(...msg),
+  error: (...msg) => console.error(...msg),
+};
+```
+
+With TypeScript you can import and extend the `Logger` class:
+
+```js
+import { Logger } from '@pinefile/pine';
+
+class CustomLogger extends Logger {
+  ...
+}
+```
+
+And then use it:
+
+```js
+configure({
+  logger: customLogger,
+});
+```
