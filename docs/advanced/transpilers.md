@@ -1,6 +1,6 @@
 # Transpilers
 
-Example of how to use Babel transpiler for your `pinefile.js`
+Example of how to use [Babel](https://babeljs.io/) transpiler for your `pinefile.js`
 
 ```json
 {
@@ -18,7 +18,7 @@ Example of how to use Babel transpiler for your `pinefile.js`
 }
 ```
 
-Example of how to use TypeScript transpiler for your `pinefile.ts`
+Example of how to use [TypeScript](https://www.typescriptlang.org/) transpiler for your `pinefile.ts`
 
 ```json
 {
@@ -32,7 +32,7 @@ Example of how to use TypeScript transpiler for your `pinefile.ts`
 }
 ```
 
-Example of how to use esbuild transpiler for your `pinefile.[j|t]s`
+Example of how to use [esbuild](https://esbuild.github.io/) transpiler for your `pinefile.[j|t]s`
 
 ```json
 {
@@ -41,6 +41,20 @@ Example of how to use esbuild transpiler for your `pinefile.[j|t]s`
   },
   "devDependencies": {
     "esbuild-register": "^2.3.0"
+  }
+}
+```
+
+
+Example of how to use [swc](https://swc.rs/) transpiler for your `pinefile.[j|t]s`
+
+```json
+{
+  "pine": {
+    "require": ["@swc-node/register"]
+  },
+  "devDependencies": {
+    "@swc-node/register": "^1.3.6"
   }
 }
 ```
