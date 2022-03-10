@@ -12,7 +12,7 @@ The global command will look for pinefiles in:
 
 - Your home folder, e.g `~/pinefile.js`
 - The `~/.pine/` directory.
-- Or anywhere with `--file` flag.
+- Or anywhere with `--file` flag (works only without `global` command).
 
 ## Example
 
