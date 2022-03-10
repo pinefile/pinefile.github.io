@@ -45,3 +45,5 @@ Then run it! It is best to either place `pine` inside a npm run script or run it
 ```
 npx pine build
 ```
+
+From version 1.6.0 you can create [global](./commands/global.md) pinefiles.
