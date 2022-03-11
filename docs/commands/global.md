@@ -1,4 +1,4 @@
-# Global command
+# Global
 
 > Since 1.6.0
 
