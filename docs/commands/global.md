@@ -10,9 +10,10 @@ pine global <task> <options>
 
 The global command will look for pinefiles in:
 
-- Your home folder, e.g `~/pinefile.js`
-- The `~/.pine/` directory, eg `~/.pine/pinefile.js`
-- Or anywhere with `--file` flag (works only without `global` command).
+1. Your home folder, e.g `~/pinefile.js`
+2. The `~/.pine/` folder, eg `~/.pine/pinefile.js`
+
+Or you can load files anywhere with the `--file` flag. This flag dosen't work with the `global` command.
 
 ## Example
 
