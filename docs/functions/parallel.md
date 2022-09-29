@@ -7,9 +7,9 @@ Run tasks that will be executed simultaneously.
 You can combine tasks into one, e.g have a default task for building everything.
 
 ```js
-const { parallel } = require("@pinefile/pine");
+import { parallel } from "@pinefile/pine";
 
-module.exports = {
+export default {
   example: parallel("line", "build"),
   lint: () => {},
   build: () => {},
@@ -21,9 +21,9 @@ module.exports = {
 Support both `callback`-format and asynchronous functions.
 
 ```js
-const { log, parallel } = require("@pinefile/pine");
+import { log, parallel } from "@pinefile/pine";
 
-module.exports = {
+export default {
   example: async () => {
     const tasks = [
       (done) => {

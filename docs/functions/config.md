@@ -23,13 +23,13 @@ module.exports = {
 The function will be given the existing configuration and the task name as a optional argument. The function should return a plain JavaScript object which will be merged into the existing configuration.
 
 ```js
-const { configure } = require("@pinefile/pine");
+import { configure } from '@pinefile/pine';
 
 configure((config) => ({
   // see options
 }));
 
-module.exports = {
+export default {
   // tasks
 };
 ```
@@ -43,9 +43,9 @@ You can see all current options for `configure` [here](https://github.com/pinefi
 You can always get the current configuration with `getConfig` function:
 
 ```js
-const { getConfig } = require("@pinefile/pine");
+import { getConfig } from '@pinefile/pine';
 
-module.exports = {
+export default {
   config: () => {
     const config = getConfig();
     console.log(config);

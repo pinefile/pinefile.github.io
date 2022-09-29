@@ -5,9 +5,9 @@ Pine has a built-in logger which support different log levels. You can [configur
 ## Info
 
 ```js
-const { log } = require("@pinefile/pine");
+import { log } from '@pinefile/pine';
 
-module.exports = {
+export default {
   example: () => {
     log.info("Foo");
   },
@@ -17,9 +17,9 @@ module.exports = {
 ## Warning
 
 ```js
-const { log } = require("@pinefile/pine");
+import { log } from '@pinefile/pine';
 
-module.exports = {
+export default {
   example: () => {
     log.warn("Foo");
   },
@@ -29,9 +29,9 @@ module.exports = {
 ## Error
 
 ```js
-const { log } = require("@pinefile/pine");
+import { log } from '@pinefile/pine';
 
-module.exports = {
+export default {
   example: () => {
     log.error("Foo");
   },
@@ -43,13 +43,13 @@ module.exports = {
 With `createLogger` you can create your own logger with custom prefix
 
 ```js
-const { createLogger } = require('@pinefile/pine');
+import { createLogger } from '@pinefile/pine';
 
 const log = createLogger({
   prefix: '[pine]'
 });
 
-module.exports = {
+export default {
   example: () => {
     log.info('Foo');
   },

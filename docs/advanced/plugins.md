@@ -12,7 +12,7 @@ Most of the functions that Pine exports is standalone functions, e.g [shell](../
 ```js
 const echo = console.log;
 
-module.exports = {
+export default {
   example: () => {
     echo('Foo');
   },

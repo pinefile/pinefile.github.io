@@ -11,7 +11,7 @@ The returning function can take a `done` callback argument where you can send in
 You can always use the `configure` function to set and `getConfig` function to get the values.
 
 ```js
-const { api } = require('@pinefile/pine');
+import { api } from '@pinefile/pine';
 
 // with create runner function
 const runner = api.createRunner(async (pinefile, name, argv) => {
@@ -39,9 +39,9 @@ const runner = async (pinefile, name, argv) => {
 Every task in pine can be a runner function that does something completely different than the default behaviour. You can combine a task based runner function with the actual task, here is an example:
 
 ```js
-const { api, log } = require('@pinefile/pine');
+import { api, log } from '@pinefile/pine';
 
-module.exports = {
+export default {
   hello: async (pinefile, name, argv) => {
     if (argv) {
       return async () => {
@@ -70,7 +70,7 @@ Global runner functions are used for all tasks and it changes the way a task is 
 Runner functions do support options and that can be handy if you want to configure your runner. The options object will be sent in as a fourth argument to the runner function, here is a example:
 
 ```js
-const { api, configure, log } = require('@pinefile/pine');
+import { api, configure, log } from '@pinefile/pine';
 
 // with create runner function
 const runner = api.createRunner(async (pinefile, name, argv, options = {}) => {
@@ -85,7 +85,7 @@ configure({
   runner,
 });
 
-module.exports = {
+export default {
   hello: () => {
     log.info(`Hello ${pinefile.name}`);
   },
@@ -95,7 +95,7 @@ module.exports = {
 Global runner functions can take a optional options object so you can configure your runner function from the Pinefile.
 
 ```js
-const { api, configure, log } = require('@pinefile/pine');
+import { api, configure, log } from '@pinefile/pine';
 
 // with create runner function
 const runner = api.createRunner(
@@ -118,7 +118,7 @@ configure({
   ],
 });
 
-module.exports = {
+export default {
   hello: () => {
     log.info(`Hello ${pinefile.name}`);
   },

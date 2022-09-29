@@ -5,9 +5,9 @@ Run shell commands and returning output instead of log as [run](./run.md) functi
 ## Usage
 
 ```js
-const { shell } = require('@pinefile/pine');
+import { shell } from '@pinefile/pine';
 
-module.exports = {
+export default {
   example: async () => {
     const gitLatestCommitID = await shell('git rev-parse HEAD');
   },

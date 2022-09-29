@@ -7,9 +7,9 @@ Run tasks that will be executed one after another, in sequential order.
 You can combine tasks into one, e.g have a default task for building everything.
 
 ```js
-const { series } = require("@pinefile/pine");
+import { series } from "@pinefile/pine";
 
-module.exports = {
+export default {
   example: series("line", "build"),
   lint: () => {},
   build: () => {},
@@ -21,9 +21,9 @@ module.exports = {
 Support both `callback`-format and asynchronous functions.
 
 ```js
-const { log, series } = require("@pinefile/pine");
+import { log, series } from "@pinefile/pine";
 
-module.exports = {
+export default {
   example: async () => {
     const tasks = [
       (done) => {

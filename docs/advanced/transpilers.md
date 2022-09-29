@@ -1,10 +1,15 @@
 # Transpilers
 
+Since version 2 you don't need to register a custom transpiler since we load `esbuild-register` by default. But if you want to load your own you can still do it by disabling `esbuild-register` as described below.
+
+## Custom transpilers
+
 Example of how to use [Babel](https://babeljs.io/) transpiler for your `pinefile.js`
 
 ```json
 {
   "pine": {
+    "esbuild": false,
     "require": ["@babel/register"]
   },
   "babel": {
@@ -23,6 +28,7 @@ Example of how to use [TypeScript](https://www.typescriptlang.org/) transpiler f
 ```json
 {
   "pine": {
+    "esbuild": false,
     "require": ["ts-node/register"]
   },
   "devDependencies": {
@@ -37,6 +43,7 @@ Example of how to use [esbuild](https://esbuild.github.io/) transpiler for your 
 ```json
 {
   "pine": {
+    "esbuild": false,
     "require": ["esbuild-register"]
   },
   "devDependencies": {
@@ -51,6 +58,7 @@ Example of how to use [swc](https://swc.rs/) transpiler for your `pinefile.[j|t]
 ```json
 {
   "pine": {
+    "esbuild": false,
     "require": ["@swc-node/register"]
   },
   "devDependencies": {

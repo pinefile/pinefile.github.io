@@ -11,26 +11,26 @@ Install with `npm`
 npm install --save @pinefile/pine
 ```
 
-Then create `Pinefile` or `pinefile.js`
+Then create `pinefile.js` or `pinefile.ts`
 
 ```js
-const { run } = require("@pinefile/pine");
+import { run } from '@pinefile/pine';
 
-exports.build = () => {
+export const build = () => {
   console.log("Building...");
 };
 
-exports.test = async () => {
+export const test = async () => {
   await run("jest");
 };
 ```
 
-or by using `module.exports`
+or by using default export
 
 ```js
-const { run } = require("@pinefile/pine");
+import { run } from '@pinefile/pine';
 
-module.exports = {
+export default {
   build: () => {
     console.log("Building...");
   },

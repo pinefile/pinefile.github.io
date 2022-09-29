@@ -5,9 +5,9 @@ Run shell commands and log instead of returning output as [shell](./shell.md) fu
 ## Usage
 
 ```js
-const { run } = require("@pinefile/pine");
+import { run } from "@pinefile/pine";
 
-module.exports = {
+export default {
   example: async () => {
     await run("tsc");
   },

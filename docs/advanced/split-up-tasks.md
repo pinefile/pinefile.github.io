@@ -4,31 +4,23 @@ You can split up tasks in more than one file, e.g having all build tasks in one 
 
 ```js
 // tasks/build.js
-module.exports = {
+export default {
   css: () => console.log("build:css"),
   default: () => console.log("build"),
 };
 
 // pinefile.js
-module.exports = {
+export default {
   build: require("./tasks/build.js"),
 };
 ```
 
 Then you can run `npx pine build:css`
 
-To load and export all tasks automatic you can do it with `fs.readFileSync` or some glob package.
+To load and export all tasks automatic you can use the `tasks` function that exists since version 2.
 
 ```js
-const fs = require('fs');
+import { tasks } from '@pinefile/pine';
 
-const tasks = fs.readdirSync('./tasks').reduce(
-  (prev, cur) => ({
-    ...prev,
-    [cur.split('.').shift()]: require(`./tasks/${cur}`),
-  }),
-  {}
-);
-
-module.exports = tasks;
+export default tasks(`./tasks`)
 ```
