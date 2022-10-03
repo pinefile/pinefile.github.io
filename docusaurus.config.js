@@ -12,6 +12,7 @@ module.exports = {
   stylesheets: [
     'https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700|Source+Code+Pro:500,700|Source+Sans+Pro:400,400i,700',
   ],
+  trailingSlash: false,
   themeConfig: {
     // announcementBar: {
     //   id: 'work_in_progress',
