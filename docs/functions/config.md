@@ -7,13 +7,13 @@ Pine can be configured via the `configure` function, which accepts:
 The object will be merged into the existing configuration.
 
 ```js
-const { configure } = require("@pinefile/pine");
+import { configure } from '@pinefile/pine';
 
 configure({
   // see options
 });
 
-module.exports = {
+export default {
   // tasks
 };
 ```
